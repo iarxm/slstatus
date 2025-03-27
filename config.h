@@ -2,25 +2,24 @@ const unsigned int interval = 3000;
 static const char unknown_str[] = "n/a";
 #define MAXLEN 2048
 static const struct arg args[] = {
-	/* function            format          argument */
-	{ datetime,           "%s   ",         "%F %T" },
+	{ datetime,           "%s ",           "%F %T" },
+    { num_files,          "I%s   ",        "/home/x/.xx/mlx/xao/ii/cur" },
 
-    { num_files,          "I%s ",          "/home/x/.xx/mlx/xao/ii/cur" },
-    { wifi_essid,         "WE%s ",         "wlan0" },
-    { battery_remaining,  "BR%s ",         "BAT1" },
-    { battery_state,      "BS%s   ",       "BAT1" },
+    { wifi_essid,         "%s ",           "wlan0" },
+    { battery_perc,       "B %s ",         "BAT1" },
+    { battery_remaining,  "%s ",           "BAT1" },
+    { battery_state,      "%s   ",         "BAT1" },
 
-    { load_avg,           "[%s L] ",       NULL },
+    { load_avg,           "L %s   ",       NULL },
+
     { cpu_perc,           "CP%s ",         NULL },
     { temp,               "CT%s ",         "/sys/class/thermal/thermal_zone0/temp" },
-    { entropy,            "E%s ",          NULL },
+    { entropy,            "E%s    ",       NULL },
 
     { ram_used,           "RU%s ",         NULL },
-    { disk_perc,          "DP%s ",         "/" },
+    { disk_free,          "DF%s ",         "/" },
 };
 /*
- * function            description                     argument (example)
- *
  * battery_perc        battery percentage              battery name (BAT0)
  *                                                     NULL on OpenBSD/FreeBSD
  * battery_remaining   battery remaining HH:MM         battery name (BAT0)
@@ -72,4 +71,3 @@ static const struct arg args[] = {
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
-

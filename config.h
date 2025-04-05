@@ -17,7 +17,7 @@ static const struct arg args[] = {
     { entropy,            "E%s    ",       NULL },
 
     { ram_used,           "RU%s ",         NULL },
-    { disk_free,          "DF%s ",         "/" },
+    { disk_free,          "DF%s          ",         "/" },
 };
 /*
  * battery_perc        battery percentage              battery name (BAT0)

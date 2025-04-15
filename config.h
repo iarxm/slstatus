@@ -2,11 +2,13 @@ const unsigned int interval = 3000;
 static const char unknown_str[] = "n/a";
 #define MAXLEN 2048
 static const struct arg args[] = {
-	{ datetime,           "%s  ",         "%T       %F" },
+	{ datetime,           "%s  ",          "%T      %F" },
     { num_files,          "I%s   ",        "/home/x/.xx/mlx/xao/ii/cur" },
 
-    { wifi_essid,         "%s ",           "wlan0" },
-    { battery_perc,       "B %s ",         "BAT1" },
+    { wifi_essid,         "%s   ",         "wlan0" },
+
+
+    { battery_perc,       "B %s% ",        "BAT1" },
     { battery_remaining,  "%s ",           "BAT1" },
     { battery_state,      "%s   ",         "BAT1" },
 

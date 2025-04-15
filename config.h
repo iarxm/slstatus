@@ -2,24 +2,20 @@ const unsigned int interval = 3000;
 static const char unknown_str[] = "n/a";
 #define MAXLEN 2048
 static const struct arg args[] = {
-	{ datetime,           "%s  ",          "%T      %F" },
+    { datetime,           "%s  ",          "%T      %F" },
     { num_files,          "I%s   ",        "/home/x/.xx/mlx/xao/ii/cur" },
 
     { wifi_essid,         "%s   ",         "wlan0" },
 
-
-    { battery_perc,       "B %s% ",        "BAT1" },
+    { battery_perc,       "B %s ",         "BAT1" },
     { battery_remaining,  "%s ",           "BAT1" },
     { battery_state,      "%s   ",         "BAT1" },
 
     { load_avg,           "L %s   ",       NULL },
 
-    { cpu_perc,           "CP%s ",         NULL },
     { temp,               "CT%s ",         "/sys/class/thermal/thermal_zone0/temp" },
-    { entropy,            "E%s ",          NULL },
-/*    { ram_used,           "RU%s ",         NULL },
-    { disk_free,          "DF%s ",         "/" },*/
-   /* { disk_free,          "DF%s          ",         "/" },*/
+    /*{ cpu_perc,           "CP%s ",         NULL },
+    { entropy,            "E%s ",          NULL },*/
 };
 /*
  * battery_perc        battery percentage              battery name (BAT0)
